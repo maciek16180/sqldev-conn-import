@@ -1,7 +1,8 @@
+from __future__ import print_function
+
 import sys
 
 from xml.etree import ElementTree
-
 
 if __name__ == '__main__':
     assert len(sys.argv) > 1, 'Input file not provided.'
@@ -26,4 +27,3 @@ if __name__ == '__main__':
 
     ElementTree.ElementTree(input_root).write(fname + '.backup', encoding="utf-8", xml_declaration=True)
     ElementTree.ElementTree(input_root).write(fname, encoding="utf-8", xml_declaration=True)
-

@@ -1,10 +1,12 @@
+from __future__ import print_function
+
 import sys
 import os
 
 from xml.etree import ElementTree
 
 FIELDS = {  # SQLDeveloper name -> (DBeaver name, default)
-    'port': ('port', 1521),
+    'port': ('port', '1521'),
     'hostname': ('host', None),
     'sid': ('database', 'orcl'),
     'user': ('user', None)

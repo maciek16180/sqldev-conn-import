@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="oracle_thin-168ec697f43-515be69f6924b104" provider="oracle" driver="oracle_thin" name="aaaa" save-password="true" read-only="false">
+		<connection host="localhost" port="1521" server="" database="orcl" url="jdbc:oracle:thin:@//localhost:1521/orcl" user="AAA" password="ddd=" type="dev"/>
+	</data-source>
+	<data-source id="oracle_thin-168ec697f62-4d839a328a4b0c9b" provider="oracle" driver="oracle_thin" name="sys@122" save-password="true" read-only="false">
+		<connection host="192.168.1.122" port="1521" server="" database="orcl" url="jdbc:oracle:thin:@//192.168.1.122:1521/orcl" user="sys" password="ddd=" type="dev"/>
+	</data-source>
+	<data-source id="oracle_thin-168ec69803d-7d80ed433abdaa75" provider="oracle" driver="oracle_thin" name="ddd" save-password="true" read-only="false" folder="14">
+		<connection host="192.168.3.142" port="1521" server="" database="orcl" url="jdbc:oracle:thin:@//192.168.3.142:1521/orcl" user="DD" password="ddd=" type="dev"/>
+		<filters>
+			<filter type="org.jkiss.dbeaver.ext.oracle.model.OracleSchema">
+				<include name="DD"/>
+			</filter>
+		</filters>
+	</data-source>
+</data-sources>

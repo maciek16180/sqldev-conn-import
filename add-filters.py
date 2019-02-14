@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
     fname = sys.argv[1]
     input_root = ElementTree.parse(fname).getroot()
+    ElementTree.ElementTree(input_root).write(fname + '.backup', encoding="utf-8", xml_declaration=True)
 
     for ds in input_root.findall('data-source'):
         user = ds.find('connection').get('user')
@@ -25,5 +26,4 @@ if __name__ == '__main__':
         filter_ = ElementTree.SubElement(filters, 'filter', type='org.jkiss.dbeaver.ext.oracle.model.OracleSchema')
         ElementTree.SubElement(filter_, 'include', name=user.upper())
 
-    ElementTree.ElementTree(input_root).write(fname + '.backup', encoding="utf-8", xml_declaration=True)
     ElementTree.ElementTree(input_root).write(fname, encoding="utf-8", xml_declaration=True)
